@@ -1,0 +1,21 @@
+@media (max-width: $desktop) {
+  .no-js {
+    .main-header {
+      display: flex;
+      padding-top: 134px;
+      padding-left: 0;
+    }
+
+    .main-header__logo {
+      display: none;
+    }
+
+    .main-header__site-navigation {
+      display: block;
+    }
+
+    .main-header__menu-button {
+      display: none;
+    }
+  }
+}

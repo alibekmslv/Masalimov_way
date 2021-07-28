@@ -1,0 +1,36 @@
+.company-phone {
+  display: flex;
+  align-items: flex-end;
+  font-size: 18px;
+  line-height: 32px;
+  color: $company-phone;
+}
+
+.company-phone:hover {
+  color: $company-phone-hover;
+
+  .company-phone__svg {
+    stroke: $company-phone-hover;
+  }
+
+  .company-phone__number::after {
+    background-color: $company-phone-hover;
+  }
+}
+
+
+.company-phone__svg {
+  margin-right: 9px;
+  fill: none;
+  stroke: $company-phone;
+}
+
+.company-phone__number::after {
+  position: relative;
+  bottom: 8px;
+  display: block;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: $company-phone;
+}
