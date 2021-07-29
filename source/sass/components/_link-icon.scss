@@ -1,0 +1,70 @@
+.link-icon {
+  display: flex;
+  align-items: flex-end;
+  font-size: 18px;
+  line-height: 32px;
+  color: $link-icon;
+}
+
+.link-icon:hover {
+  color: $link-icon-hover;
+
+  .link-icon__svg {
+    stroke: $link-icon-hover;
+  }
+
+  .link-icon__text::after {
+    background-color: $link-icon-hover;
+  }
+}
+
+.link-icon__svg {
+  fill: none;
+  stroke: $link-icon;
+}
+
+.link-icon--phone {
+  .link-icon__svg {
+    margin-right: 9px;
+  }
+}
+
+.link-icon__text::after {
+  position: relative;
+  bottom: 8px;
+  display: block;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: $link-icon;
+}
+
+.link-icon--secondary {
+  align-items: center;
+  color: $link-icon-secondary-color;
+
+  .link-icon__svg {
+    fill: none;
+    stroke: $link-icon-secondary-svg-stroke;
+  }
+
+  .link-icon__text::after {
+    background-color: $link-icon-secondary-color;
+  }
+}
+
+.link-icon--secondary.link-icon--phone {
+  font-size: 16px;
+
+  .link-icon__svg {
+    margin-right: 11px;
+  }
+}
+
+.link-icon--secondary.link-icon--mail {
+  font-size: 14px;
+
+  .link-icon__svg {
+    margin-right: 15px;
+  }
+}

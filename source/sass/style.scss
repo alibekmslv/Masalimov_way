@@ -9,12 +9,13 @@
 
 // Components
 @import "./components/site-navigation";
-@import "./components/company-phone";
+@import "./components/link-icon";
 @import "./components/menu-button";
 @import "./components/logo";
 
 // Layout
 @import "./layout/main-header";
+@import "./layout//main-footer";
 
 //State
 @import "./state/no-js.scss";
