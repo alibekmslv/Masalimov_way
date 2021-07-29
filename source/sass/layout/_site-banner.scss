@@ -1,0 +1,128 @@
+.site-banner {
+  height: 860px;
+  background-image: url("../img/backgrounds/site-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/backgrounds/site-banner@2x.jpg"),
+  }
+}
+
+.site-banner__wrapper {
+  display: grid;
+  grid-template-columns: auto 470px;
+  padding-top: 185px;
+}
+
+.site-banner__title {
+  grid-column: 2 / -1;
+  margin-top: 0;
+  margin-bottom: 30px;
+  max-width: 410px;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 80px;
+  letter-spacing: -1.10667px;
+  color: $white;
+}
+
+.site-banner__text {
+  grid-column: 2 / -1;
+  margin-top: 0;
+  margin-bottom: 33px;
+  max-width: 376px;
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: -0.466667px;
+  color: $white;
+}
+
+.site-banner__button {
+  grid-column: 2 / -1;
+  width: 340px;
+}
+
+@media (max-width: $desktop) {
+  .site-banner {
+    height: 344px;
+    background-image: url("../img/backgrounds/site-banner-tablet.jpg");
+
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/backgrounds/site-banner-tablet@2x.jpg"),
+    }
+  }
+
+  .site-banner__wrapper {
+    grid-template-columns:  0 1fr;
+    justify-items: center;
+    padding-top: 60px;
+  }
+
+  .site-banner__title {
+    margin-bottom: 15px;
+    max-width: none;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: 0;
+  }
+
+  .site-banner__text {
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-left: auto;
+    max-width: 398px;
+    text-align: center;
+  }
+
+  .site-banner__button {
+    width: 250px;
+  }
+}
+
+
+@media (max-width: $tablet) {
+  $banner-height: 235px;
+  $calc: calc($banner-height + $mobile);
+
+  .site-banner {
+    height: auto;
+    background-image: linear-gradient(180deg, transparent 0%, transparent $banner-height, $white $banner-height, $white 100%),
+      url("../img/backgrounds/site-banner-mobile.jpg");
+    background-size: contain;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(180deg, transparent 0%, transparent $banner-height, $white $banner-height, $white 100%),
+        url("../img/backgrounds/site-banner-mobile@2x.jpg"),
+    }
+
+    @media (min-width: $banner-height + $mobile) {
+      background-size: cover;
+    }
+  }
+z
+
+  .site-banner__wrapper {
+    grid-template-rows: $banner-height;
+    row-gap: 20px;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .site-banner__title {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .site-banner__text {
+    margin-bottom: 0;
+    color: black;
+  }
+
+  .site-banner__button {
+    width: 100%;
+  }
+}
