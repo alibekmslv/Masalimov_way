@@ -26,3 +26,18 @@ a {
   clip: rect(0 0 0 0);
   margin: -1px;
 }
+
+@media (max-width: $desktop) {
+  .container {
+    max-width: 726px;
+    padding: 0 21px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .container {
+    max-width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+}
