@@ -21,6 +21,12 @@
   justify-content: space-between;
 }
 
+.button--transparent {
+  border: 1px solid $button-transparent-border-color;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 @media (max-width: $desktop) {
   .button {
     padding-top: 19px;
