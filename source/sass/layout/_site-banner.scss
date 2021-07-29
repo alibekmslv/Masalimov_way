@@ -5,7 +5,7 @@
   background-size: cover;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/backgrounds/site-banner@2x.jpg"),
+    background-image: url("../img/backgrounds/site-banner@2x.jpg");
   }
 }
 
@@ -23,7 +23,7 @@
   font-weight: 600;
   font-size: 55px;
   line-height: 80px;
-  letter-spacing: -1.10667px;
+  letter-spacing: -1.11px;
   color: $white;
 }
 
@@ -34,7 +34,7 @@
   max-width: 376px;
   font-size: 16px;
   line-height: 27px;
-  letter-spacing: -0.466667px;
+  letter-spacing: -0.47px;
   color: $white;
 }
 
@@ -50,12 +50,12 @@
 
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/backgrounds/site-banner-tablet@2x.jpg"),
+      background-image: url("../img/backgrounds/site-banner-tablet@2x.jpg");
     }
   }
 
   .site-banner__wrapper {
-    grid-template-columns:  0 1fr;
+    grid-template-columns: 0 1fr;
     justify-items: center;
     padding-top: 60px;
   }
@@ -94,14 +94,13 @@
 
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient(180deg, transparent 0%, transparent $banner-height, $white $banner-height, $white 100%),
-        url("../img/backgrounds/site-banner-mobile@2x.jpg"),
+        url("../img/backgrounds/site-banner-mobile@2x.jpg");
     }
 
     @media (min-width: $banner-height + $mobile) {
       background-size: cover;
     }
   }
-z
 
   .site-banner__wrapper {
     grid-template-rows: $banner-height;
@@ -119,7 +118,7 @@ z
 
   .site-banner__text {
     margin-bottom: 0;
-    color: black;
+    color: $site-banner-text-dark;
   }
 
   .site-banner__button {
