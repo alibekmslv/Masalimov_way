@@ -35,6 +35,10 @@
   color: $tabs-tab-color-selected;
 }
 
+.tabs__tabpanel--active {
+  display: block;
+}
+
 @media (max-width: $desktop) {
   .tabs__container {
     max-width: none;

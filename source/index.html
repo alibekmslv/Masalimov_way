@@ -65,7 +65,7 @@
       <p class="paragraph places-to-visit__paragraph">Вы можете выбрать полный тур или частичный, с посещением первых 3
         мест</p>
       <div class="places-to-visit__country-cards">
-        <a class="places-to-visit__link" href="#">
+        <div class="places-to-visit__link">
           <div class="country-card">
             <picture>
               <source type="image/webp" media="(max-width: 1023px)"
@@ -79,10 +79,10 @@
                 alt="Вилла на скале на фоне гор" />
             </picture>
             <span class="country-card__title">Греция</span>
-            <button class="button button--transparent country-card__button">Смотреть подробнее</button>
+            <a class="button button--transparent country-card__button" href="#panel-greece" data-tab="tab-greece">Смотреть подробнее</a>
           </div>
-        </a>
-        <a class="places-to-visit__link" href="#">
+        </div>
+        <div class="places-to-visit__link">
           <div class="country-card">
             <picture>
               <source type="image/webp" media="(max-width: 1023px)"
@@ -96,10 +96,10 @@
                 alt="Вид на пляж и лазурный берег сверху" />
             </picture>
             <span class="country-card__title">Албания</span>
-            <button class="button button--transparent country-card__button">Смотреть подробнее</button>
+            <a class="button button--transparent country-card__button" href="#panel-albania" data-tab="tab-albania">Смотреть подробнее</a>
           </div>
-        </a>
-        <a class="places-to-visit__link" href="#">
+        </div>
+        <div class="places-to-visit__link">
           <div class="country-card">
             <picture>
               <source type="image/webp" media="(max-width: 1023px)"
@@ -113,10 +113,10 @@
                 alt="Церковь на фоне моря" />
             </picture>
             <span class="country-card__title">Македония</span>
-            <button class="button button--transparent country-card__button">Смотреть подробнее</button>
+            <a class="button button--transparent country-card__button" href="#panel-macedonia" data-tab="tab-macedonia">Смотреть подробнее</a>
           </div>
-        </a>
-        <a class="places-to-visit__link" href="#">
+        </div>
+        <div class="places-to-visit__link">
           <div class="country-card">
             <picture>
               <source type="image/webp" media="(max-width: 1023px)"
@@ -130,10 +130,10 @@
                 alt="Вид сверху на лазурную реки и лес" />
             </picture>
             <span class="country-card__title">Черногория</span>
-            <button class="button button--transparent country-card__button">Смотреть подробнее</button>
+            <a class="button button--transparent country-card__button" href="#panel-montenegro" data-tab="tab-montenegro">Смотреть подробнее</a>
           </div>
-        </a>
-        <a class="places-to-visit__link" href="#">
+        </div>
+        <div class="places-to-visit__link">
           <div class="country-card">
             <picture>
               <source type="image/webp" media="(max-width: 1023px)"
@@ -147,82 +147,236 @@
                 alt="Сталактиты в пещере" />
             </picture>
             <span class="country-card__title">Хорватия</span>
-            <button class="button button--transparent country-card__button">Смотреть подробнее</button>
+            <a class="button button--transparent country-card__button" href="#panel-croatia" data-tab="tab-croatia">Смотреть подробнее</a>
           </div>
-        </a>
+        </div>
       </div>
     </section>
     <section class="countries">
       <div class="tabs">
         <div class="container tabs__container">
           <div class="tabs__list" role="tablist" aria-label="Список стран">
-            <button class="tabs__tab tabs__tab--selected" role="tab" aria-selected="true" aria-controls="panel-1"
-              id="tab-1" tabindex="0">
+            <button class="tabs__tab tabs__tab--selected" role="tab" aria-selected="true" aria-controls="panel-greece"
+              id="tab-greece" tabindex="0">
               Греция
             </button>
-            <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1">
+            <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="panel-albania" id="tab-albania" tabindex="-1">
               Албания
             </button>
-            <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3" tabindex="-1">
+            <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="panel-macedonia" id="tab-macedonia" tabindex="-1">
               Македония
             </button>
-            <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="panel-4" id="tab-4" tabindex="-1">
+            <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="panel-montenegro" id="tab-montenegro" tabindex="-1">
               Черногория
             </button>
-            <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="panel-5" id="tab-5" tabindex="-1">
+            <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="panel-croatia" id="tab-croatia" tabindex="-1">
               Хорватия
             </button>
           </div>
         </div>
-        <div class="country container country__container tabs__tabpanel tabs__tabpanel--active tabs__tabpanel--greece"
-          id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
-          <div class="country__content">
-            <h3 class="heading country__heading">Греция</h3>
-            <p class="paragraph country__paragraph">
-              На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал.
-              Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель
-              нашего
-              путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в
-              высоту
-              600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.
-            </p>
-            <a class="button country__button" href="#">Купить тур сейчас</a>
-          </div>
-          <div class="feedback country__feedback">
-            <h3 class="heading heading--small feedback__heading">Отзывы</h3>
-            <blockquote class="feedback__blockquote">
-              <p class="paragraph paragraph--small feedback__paragraph">Метеоры в Греции можно сравнить разве что с
-                Монсерратт в Испании. Такие же высоченные скалы. Но здесь
-                потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю
-                света!
+        <div class="tabs__tabpanel tabs__tabpanel--active" id="panel-greece" role="tabpanel" tabindex="0"
+          aria-labelledby="tab-greece">
+          <div class="country container country__container">
+            <div class="country__content">
+              <h3 class="heading country__heading">Греция</h3>
+              <p class="paragraph country__paragraph">
+                На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал.
+                Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель
+                нашего
+                путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в
+                высоту
+                600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.
               </p>
-              <div class="feedback__author">
-                <picture>
-                  <source type="image/webp"
-                    srcset="img/content/users/feedback-vlada.webp 1x, img/content/users/feedback-vlada@2x.webp 2x">
-                  <img class="feedback__author-img" src="img/content/users/feedback-vlada.jpg"
-                    srcset="img/content/users/feedback-vlada@2x.jpg 2x" width="38" height="38"
-                    alt="Аватар Влады Голицыной">
-                </picture>
-                <span class="feedback__author-name">Влада Голицына</span>
-              </div>
-            </blockquote>
+              <a class="button country__button" href="#">Купить тур сейчас</a>
+            </div>
+            <div class="feedback country__feedback">
+              <h3 class="heading heading--small feedback__heading">Отзывы</h3>
+              <blockquote class="feedback__blockquote">
+                <p class="paragraph paragraph--small feedback__paragraph">Метеоры в Греции можно сравнить разве что с
+                  Монсерратт в Испании. Такие же высоченные скалы. Но здесь
+                  потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю
+                  света!
+                </p>
+                <div class="feedback__author">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="img/content/users/user-vlada.webp 1x, img/content/users/user-vlada@2x.webp 2x">
+                    <img class="feedback__author-img" src="img/content/users/user-vlada.jpg"
+                      srcset="img/content/users/user-vlada@2x.jpg 2x" width="38" height="38"
+                      alt="Аватар Влады Голицыной">
+                  </picture>
+                  <span class="feedback__author-name">Влада Голицына</span>
+                </div>
+              </blockquote>
+            </div>
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="img/content/countries/country-greece-mobile@2x.webp 1x, img/content/countries/country-greece-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="img/content/countries/country-greece-tablet@2x.webp 1x, img/content/countries/country-greece-tablet@2x.webp 2x">
+              <source type="image/webp"
+                srcset="img/content/countries/country-greece-desktop@2x.webp 1x, img/content/countries/country-greece-desktop@2x.webp 2x">
+              <source media="(max-width: 767px)"
+                srcset="img/content/countries/country-greece-mobile@2x.jpg 1x, img/content/countries/country-greece-mobile@2x.jpg 2x">
+              <source media="(max-width: 1023px)"
+                srcset="img/content/countries/country-greece-tablet@2x.jpg 1x, img/content/countries/country-greece-tablet@2x.jpg 2x">
+              <img class="country__img" src="img/content/countries/country-greece-desktop.jpg"
+                srcset="img/content/countries/country-greece-desktop@2x.jpg 2x" width="430" height="596"
+                alt="Монастырь в Греции на вершине скалы «Метеора»" />
+            </picture>
           </div>
-          <picture>
-            <source type="image/webp" media="(max-width: 767px)"
-              srcset="img/content/countries/country-greece-mobile@2x.webp 1x, img/content/countries/country-greece-mobile@2x.webp 2x">
-            <source type="image/webp" media="(max-width: 1023px)"
-              srcset="img/content/countries/country-greece-tablet@2x.webp 1x, img/content/countries/country-greece-tablet@2x.webp 2x">
-            <source type="image/webp"
-              srcset="img/content/countries/country-greece-desktop@2x.webp 1x, img/content/countries/country-greece-desktop@2x.webp 2x">
-            <source media="(max-width: 767px)"
-              srcset="img/content/countries/country-greece-mobile@2x.jpg 1x, img/content/countries/country-greece-mobile@2x.jpg 2x">
-            <source media="(max-width: 1023px)"
-              srcset="img/content/countries/country-greece-tablet@2x.jpg 1x, img/content/countries/country-greece-tablet@2x.jpg 2x">
-            <img class="country__img" src="img/content/countries/country-greece-desktop.jpg"
-              srcset="img/content/countries/country-greece-desktop@2x.jpg 2x" width="430" height="596"
-              alt="Монастырь в Греции на вершине скалы Метеора" />
-          </picture>
+        </div>
+        <div class="tabs__tabpanel" id="panel-albania" role="tabpanel" tabindex="0" aria-labelledby="tab-greece" hidden>
+          <div class="country container country__container">
+            <div class="country__content">
+              <h3 class="heading country__heading">Албания</h3>
+              <p class="paragraph country__paragraph">
+                В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и удивительным пляжем.
+                Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и слишком крупный
+                песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого
+                состояния.
+              </p>
+              <a class="button country__button" href="#">Купить тур сейчас</a>
+            </div>
+            <div class="feedback country__feedback">
+              <h3 class="heading heading--small feedback__heading">Отзывы</h3>
+              <blockquote class="feedback__blockquote">
+                <p class="paragraph paragraph--small feedback__paragraph">Замечательный курорт, обязательно стоит
+                  посетить. В следующий раз возьму с собой сестру, чтобы тоже смогла вкусить все красоты природы :)
+                </p>
+                <div class="feedback__author">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="img/content/users/user-marishka.webp 1x, img/content/users/user-marishka@2x.webp 2x">
+                    <img class="feedback__author-img" src="img/content/users/user-marishka.jpg"
+                      srcset="img/content/users/user-marishka@2x.jpg 2x" width="38" height="38"
+                      alt="Аватар клиента Мариша">
+                  </picture>
+                  <span class="feedback__author-name">Маришка</span>
+                </div>
+              </blockquote>
+            </div>
+            <picture>
+              <source type="image/webp"
+                srcset="img/content/countries/country-albania-desktop@2x.webp 1x, img/content/countries/country-albania-desktop@2x.webp 2x">
+              <img class="country__img" src="img/content/countries/country-albania-desktop.jpg"
+                srcset="img/content/countries/country-albania-desktop@2x.jpg 2x" width="430" height="596"
+                alt="Пляж курорта «Ксамиль». Вид сверху" />
+            </picture>
+          </div>
+        </div>
+        <div class="tabs__tabpanel" id="panel-macedonia" role="tabpanel" tabindex="0" aria-labelledby="tab-macedonia" hidden>
+          <div class="country container country__container">
+            <div class="country__content">
+              <h3 class="heading country__heading">Македония</h3>
+              <p class="paragraph country__paragraph">
+                В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно красивой лесистой
+                местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев
+                Камен где находится археологический памятник Кокино в длину около 100 метров.
+              </p>
+              <a class="button country__button" href="#">Купить тур сейчас</a>
+            </div>
+            <div class="feedback country__feedback">
+              <h3 class="heading heading--small feedback__heading">Отзывы</h3>
+              <blockquote class="feedback__blockquote">
+                <p class="paragraph paragraph--small feedback__paragraph">Я бы сказал необычное старое здание. В
+                  архитектуре я не разбираюсь, но подъем в гору был очень веселым так как люди оказались легкими и
+                  заводными. Красота природы впечатлила, особенно после долгого пути в гору.
+                </p>
+                <div class="feedback__author">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="img/content/users/user-mikhail.webp 1x, img/content/users/user-mikhail@2x.webp 2x">
+                    <img class="feedback__author-img" src="img/content/users/user-mikhail.jpg"
+                      srcset="img/content/users/user-mikhail@2x.jpg 2x" width="38" height="38"
+                      alt="Аватар клиента Михаил Кузьмин">
+                  </picture>
+                  <span class="feedback__author-name">Михаил Кузьмин</span>
+                </div>
+              </blockquote>
+            </div>
+            <picture>
+              <source type="image/webp"
+                srcset="img/content/countries/country-macedonia-desktop@2x.webp 1x, img/content/countries/country-macedonia-desktop@2x.webp 2x">
+              <img class="country__img" src="img/content/countries/country-macedonia-desktop.jpg"
+                srcset="img/content/countries/country-macedonia-desktop@2x.jpg 2x" width="430" height="596"
+                alt="«Палаошник» на фоне Охридского озера" />
+            </picture>
+          </div>
+        </div>
+        <div class="tabs__tabpanel" id="panel-montenegro" role="tabpanel" tabindex="0" aria-labelledby="tab-montenegro" hidden>
+          <div class="country container country__container">
+            <div class="country__content">
+              <h3 class="heading country__heading">Черногория</h3>
+              <p class="paragraph country__paragraph">
+                Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых местах высотой
+                берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км.
+              </p>
+              <a class="button country__button" href="#">Купить тур сейчас</a>
+            </div>
+            <div class="feedback country__feedback">
+              <h3 class="heading heading--small feedback__heading">Отзывы</h3>
+              <blockquote class="feedback__blockquote">
+                <p class="paragraph paragraph--small feedback__paragraph">Неописуемой красоты каньон! Ничего прекраснее
+                  в жизни не видела, разве что в фильмах :) Всем советую
+                <div class="feedback__author">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="img/content/users/user-anastasia.webp 1x, img/content/users/user-anastasia@2x.webp 2x">
+                    <img class="feedback__author-img" src="img/content/users/user-anastasia.jpg"
+                      srcset="img/content/users/user-anastasia@2x.jpg 2x" width="38" height="38"
+                      alt="Аватар клиента Анастасия Мей">
+                  </picture>
+                  <span class="feedback__author-name">Анастасия Мей</span>
+                </div>
+              </blockquote>
+            </div>
+            <picture>
+              <source type="image/webp"
+                srcset="img/content/countries/country-montenegro-desktop@2x.webp 1x, img/content/countries/country-montenegro-desktop@2x.webp 2x">
+              <img class="country__img" src="img/content/countries/country-montenegro-desktop.jpg"
+                srcset="img/content/countries/country-montenegro-desktop@2x.jpg 2x" width="430" height="596"
+                alt="Каньон реки Тара" />
+            </picture>
+          </div>
+        </div>
+        <div class="tabs__tabpanel" id="panel-croatia" role="tabpanel" tabindex="0" aria-labelledby="tab-croatia" hidden>
+          <div class="country container country__container">
+            <div class="country__content">
+              <h3 class="heading country__heading">Хорватия</h3>
+              <p class="paragraph country__paragraph">
+                В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир увлечет вас на 80-ти
+                метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами —
+                сталактитами и сталагмитами — формировавшимися тысячи и тысячи лет.
+              </p>
+              <a class="button country__button" href="#">Купить тур сейчас</a>
+            </div>
+            <div class="feedback country__feedback">
+              <h3 class="heading heading--small feedback__heading">Отзывы</h3>
+              <blockquote class="feedback__blockquote">
+                <p class="paragraph paragraph--small feedback__paragraph">Мы поехали всей семьей, я, моя жена и
+                  родители. Пещера просто незабываема! А то, что все это формировалось тысячелетиями, мега необычно.
+                  Первоначально даже не верилось, но натур ни с чем не спутать по итогу :)
+                <div class="feedback__author">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="img/content/users/user-vladimir.webp 1x, img/content/users/user-vladimir@2x.webp 2x">
+                    <img class="feedback__author-img" src="img/content/users/user-vladimir.jpg"
+                      srcset="img/content/users/user-vladimir@2x.jpg 2x" width="38" height="38"
+                      alt="Аватар клиента Владимир Мулицин">
+                  </picture>
+                  <span class="feedback__author-name">Владимир Мулицин</span>
+                </div>
+              </blockquote>
+            </div>
+            <picture>
+              <source type="image/webp"
+                srcset="img/content/countries/country-croatia-desktop@2x.webp 1x, img/content/countries/country-croatia-desktop@2x.webp 2x">
+              <img class="country__img" src="img/content/countries/country-croatia-desktop.jpg"
+                srcset="img/content/countries/country-croatia-desktop@2x.jpg 2x" width="430" height="596"
+                alt="Сталактиты в пещере Бередине" />
+            </picture>
+          </div>
         </div>
       </div>
     </section>
