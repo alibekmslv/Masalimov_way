@@ -1,0 +1,15 @@
+.countries {
+  margin-top: 124px;
+}
+
+@media (max-width: $desktop) {
+  .countries {
+    margin-top: 97px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .countries {
+    margin-top: 40px;
+  }
+}

@@ -6,11 +6,22 @@
   color: $heading-color;
 }
 
+.heading--small {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  letter-spacing: -0.7px;
+}
+
 @media (max-width: $desktop) {
   .heading {
     font-size: 30px;
     line-height: 45px;
     letter-spacing: 0;
+  }
+
+  .heading--small {
+    line-height: 37px;
   }
 }
 

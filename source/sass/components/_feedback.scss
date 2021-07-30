@@ -1,0 +1,62 @@
+.feedback {
+  padding: 30px;
+  width: 382px;
+  box-sizing: border-box;
+  background-color: $white;
+}
+
+.feedback .feedback__paragraph {
+  margin-top: 0;
+  margin-bottom: 35px;
+  padding-top: 20px;
+
+  &::before {
+    position: relative;
+    top: -20px;
+    display: block;
+    content: "";
+    width: 68px;
+    height: 1px;
+    background-color: $separator;
+  }
+}
+
+.feedback__heading {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.feedback__blockquote {
+  margin: 0;
+}
+
+.feedback__author {
+  display: flex;
+  align-items: center;
+}
+
+.feedback__author-img {
+  border-radius: 50%;
+  display: block;
+  margin-right: 15px;
+}
+
+.feedback__author-name {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.47px;
+}
+
+@media (max-width: $tablet) {
+  .feedback {
+    width: 268px;
+    text-align: center;
+  }
+
+  .feedback .feedback__paragraph {
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

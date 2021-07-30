@@ -13,6 +13,10 @@ a {
   min-height: 100%;
 }
 
+.main {
+  overflow-x: auto;
+}
+
 .container {
   max-width: 1170px;
   padding: 0 30px;

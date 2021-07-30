@@ -18,6 +18,11 @@
   }
 }
 
+.paragraph--small {
+  font-size: 14px;
+  letter-spacing: -0.4px;
+}
+
 @media (max-width: $desktop) {
   .heading + .paragraph {
     padding-top: 0;
