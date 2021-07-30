@@ -2,36 +2,16 @@
   margin-top: 200px;
 }
 
-.places-to-visit__title {
+.places-to-visit__heading {
   margin-top: 0;
   margin-bottom: 30px;
   max-width: 358px;
-  font-weight: 600;
-  font-size: 55px;
-  line-height: 80px;
-  letter-spacing: -1.25px;
-  color: $places-to-visit-title-color;
 }
 
-.places-to-visit__text {
+.places-to-visit__paragraph {
   margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 30px;
-  padding-bottom: 55px;
+  margin-bottom: 55px;
   max-width: 328px;
-  font-size: 16px;
-  line-height: 28px;
-  letter-spacing: -0.47px;
-
-  &::before {
-    position: relative;
-    top: -30px;
-    display: block;
-    content: "";
-    width: 228px;
-    height: 4px;
-    background-color: $separator;
-  }
 }
 
 .places-to-visit__country-cards {
@@ -71,26 +51,18 @@
     margin-top: 80px;
   }
 
-  .places-to-visit__title {
+  .places-to-visit__heading {
     margin-bottom: 20px;
     max-width: none;
-    font-size: 30px;
-    line-height: 45px;
     text-align: center;
-    letter-spacing: 0;
   }
 
-  .places-to-visit__text {
+  .places-to-visit__paragraph {
     margin-right: auto;
     margin-left: auto;
-    padding-top: 0;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
     max-width: 343px;
     text-align: center;
-
-    &::before {
-      display: none;
-    }
   }
 
   .places-to-visit__country-cards {
@@ -109,22 +81,21 @@
 }
 
 @media (max-width: $tablet) {
-  .places-to-visit__title {
-    font-size: 24px;
-    line-height: 36px;
-  }
-
   .places-to-visit__country-cards {
     flex-direction: column;
     justify-content: stretch;
     align-items: center;
   }
 
+  .places-to-visit__link:nth-of-type(2n - 1):not(:last-of-type) {
+    margin-right: 0;
+  }
+
   .places-to-visit__link:not(:last-of-type) {
     margin-bottom: 35px;
   }
 
-  .places-to-visit__text {
-    padding-bottom: 20px;
+  .places-to-visit__paragraph {
+    margin-bottom: 20px;
   }
 }

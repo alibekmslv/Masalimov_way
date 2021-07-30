@@ -14,12 +14,18 @@
 @import "./components/logo";
 @import "./components/button";
 @import "./components/country-card";
+@import "./components/heading";
+@import "./components/paragraph";
+@import "./components/tabs";
+@import "./components/country";
+@import "./components/feedback";
 
 // Layout
 @import "./layout/main-header";
 @import "./layout/site-banner";
-@import "./layout//main-footer";
+@import "./layout/main-footer";
 @import "./layout/places-to-visit";
+@import "./layout/countries";
 
 //State
 @import "./state/no-js.scss";
