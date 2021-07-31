@@ -19,6 +19,7 @@
 @import "./components/tabs";
 @import "./components/country";
 @import "./components/feedback";
+@import "./components//card-price";
 
 // Layout
 @import "./layout/main-header";
@@ -26,6 +27,7 @@
 @import "./layout/main-footer";
 @import "./layout/places-to-visit";
 @import "./layout/countries";
+@import "./layout/prices";
 
 //State
 @import "./state/no-js.scss";
