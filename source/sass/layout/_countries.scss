@@ -1,5 +1,9 @@
 .countries {
   margin-top: 124px;
+  background-image: url("../img/backgrounds/europe-map.svg");
+  background-repeat: no-repeat;
+  background-position: center 119px;
+  padding-bottom: 508px;
 }
 
 @media (max-width: $desktop) {
@@ -11,5 +15,12 @@
 @media (max-width: $tablet) {
   .countries {
     margin-top: 40px;
+  }
+}
+
+@media (max-width: $desktop) {
+  .countries {
+    padding-bottom: 0;
+    background-image: none;
   }
 }
