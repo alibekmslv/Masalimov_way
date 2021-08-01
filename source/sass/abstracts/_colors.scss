@@ -14,6 +14,13 @@ $mischka: hsl(225, 11%, 86%);
 $white-70: hsla(0, 0%, 100%, 0.7);
 $soft-peach: hsl(0, 27%, 98%);
 
+// Background's fallback colors
+$section-feedback-bg-color: hsl(1, 80%, 69%);
+
+// Box shadows
+$feedback-form-box-shadow: hsla(209, 24%, 21%, 0.1);
+
+// Purpose
 $site-navigation-link: $woodsmoke;
 $site-navigation-link-hover: $bittersweet;
 $link-icon: $woodsmoke;
@@ -50,3 +57,7 @@ $card-price-icon-check-fill-hover: $woodsmoke;
 $card-price-separator: $charad-30;
 $card-price-separator-hover: $bittersweet;
 $countries-bg-color: $soft-peach;
+$feedback-form-color: $woodsmoke;
+$input-border-color: $charad-30;
+$input-color: $woodsmoke;
+$input-invalid-color: $bittersweet;

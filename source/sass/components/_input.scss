@@ -1,0 +1,81 @@
+.input {
+  position: relative;
+}
+
+.input--required {
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 6px;
+    height: 6px;
+    top: 10px;
+    left: 14px;
+    right: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.44806 5.74097L3.365 3.97248L4.89324 4.92103L5.4248 4.05286L3.81351 3.24901L5.4248 2.44515L4.89324 1.5609L3.365 2.50946L3.44806 0.740967H2.40155L2.48461 2.50946L0.939755 1.5609L0.424805 2.44515L2.0361 3.24901L0.424805 4.05286L0.939755 4.92103L2.48461 3.97248L2.40155 5.74097H3.44806Z' fill='%23FE7865'/%3E%3C/svg%3E%0A");
+  }
+
+  .input__field {
+    padding-left: 30px;
+  }
+}
+
+.input--tel {
+  &::before {
+    position: absolute;
+    left: 26px;
+    top: 15px;
+    display: inline;
+    content: '+7';
+    font-size: 14px;
+    line-height: 17px;
+    color: $input-color;
+  }
+
+  .input__field {
+    padding-left: 50px;
+  }
+}
+
+
+.input__field {
+  box-sizing: border-box;
+  background-color: inherit;
+  border-width: 1px;
+  border-color: $input-border-color;
+  border-radius: 0;
+  padding-top: 15px;
+  padding-right: 14px;
+  padding-bottom: 14px;
+  padding-left: 14px;
+  width: 269px;
+  font-size: 14px;
+  line-height: 17px;
+
+  &::placeholder {
+    color: $input-color;
+  }
+}
+
+.input--invalid {
+
+  .input__field {
+    border-color: $input-invalid-color;
+  }
+
+  .input__validation-text {
+    display: inline;
+  }
+}
+
+
+
+.input__validation-text {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  font-size: 12px;
+  line-height: 15px;
+  display: none;
+  color: $input-invalid-color;
+}

@@ -1,0 +1,41 @@
+.section-feedback__wrapper {
+  margin-top: 140px;
+  display: flex;
+  justify-content: flex-end;
+  background-image: url("../img/backgrounds/ruby-red-sunset-desktop.jpg"),
+    linear-gradient(to right, $section-feedback-bg-color 0%, $section-feedback-bg-color 840px, transparent 840px, transparent 100%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: 30px;
+
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/backgrounds/ruby-red-sunset-desktop@2x.jpg"),
+    linear-gradient(to right, $section-feedback-bg-color 0%, $section-feedback-bg-color 840px, transparent 840px, transparent 100%);
+  }
+}
+
+
+.section-feedback__feedback-form {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+@media (max-width: $desktop) {
+  .section-feedback {
+    background-color: $section-feedback-bg-color;
+    background-image: url("../img/backgrounds/ruby-red-sunset-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .section-feedback__wrapper {
+    background-image: none;
+    justify-content: center;
+  }
+
+  .section-feedback__feedback-form {
+    margin-top: 70px;
+    margin-bottom: 74px;
+  }
+}

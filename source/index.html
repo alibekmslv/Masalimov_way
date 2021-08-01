@@ -485,6 +485,31 @@
         </div>
       </div>
     </section>
+    <section class="section-feedback">
+      <div class="container section-feedback__wrapper">
+        <div class="feedback-form section-feedback__feedback-form">
+          <h2 class="feedback-form__title">У Вас остались вопросы?</h2>
+          <p class="feedback-form__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
+          <form action="https://echo.htmlacademy.ru/courses" method="post" autocomplete="off">
+            <div class="feedback-form__inputs">
+              <label class="input input--tel input--required">
+                <span class="visually-hidden">Номер телефона</span>
+                <input class="input__field" name="phoneNumber" type="tel" placeholder="Введите 10 цифр номера" required>
+                <span class="input__validation-text">Данные не верны</span>
+              </label>
+
+              <label class="input">
+                <span class="visually-hidden">Электронная почта</span>
+                <input class="input__field" name="email" type="email" placeholder="E-mail">
+                <span class="input__validation-text">Данные не верны</span>
+              </label>
+
+            </div>
+            <button class="button button--small" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="main-footer container">
     <section class="main-footer__wrapper">
