@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  border: none;
   padding: 30px 40px;
   background-color: $button-bg-color;
   font-weight: 700;
@@ -11,6 +12,7 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   color: $white;
+  cursor: pointer;
 }
 
 .button__svg {
@@ -25,6 +27,11 @@
   border: 1px solid $button-transparent-border-color;
   background-color: transparent;
   cursor: pointer;
+}
+
+.button--small {
+  padding-top: 18px;
+  padding-bottom: 17px;
 }
 
 @media (max-width: $desktop) {

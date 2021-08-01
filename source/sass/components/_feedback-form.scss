@@ -1,0 +1,31 @@
+.feedback-form {
+  border-radius: 5px;
+  padding: 50px;
+  background-color: $white;
+  box-shadow: 0px 4px 30px $feedback-form-box-shadow;
+  text-align: center;
+}
+
+
+.feedback-form__title {
+  margin-top: 0;
+  margin-bottom: 11px;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 32px;
+  color: $feedback-form-color;
+}
+
+.feedback-form__text {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.feedback-form__inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 19px;
+  margin-bottom: 25px;
+}

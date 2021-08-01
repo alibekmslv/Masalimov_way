@@ -1,15 +1,18 @@
 .card-price {
   display: flex;
   flex-direction: column;
-  border: 3px solid $card-price-border-color;
+  border: 1px solid $card-price-border-color;
   border-radius: 6px;
   box-sizing: border-box;
-  padding: 37px 27px 27px;
+  background-color: $white;
+  padding: 39px 29px 29px;
   width: 370px;
 }
 
 .card-price:hover {
+  border-width: 3px;
   border-color: $card-price-border-color-hover;
+  padding: 37px 27px 27px;
 
   .card-price__header {
     color: $card-price-header-color-hover;
@@ -18,16 +21,16 @@
   .card-price__icon-check {
     fill: $card-price-icon-check-fill-hover;
   }
+
+  .card-price__text::after {
+    background-color: $card-price-separator-hover;
+  }
 }
 
 .card-price__header {
   display: flex;
   justify-content: space-between;
   color: $card-price-header-color;
-}
-
-.card-price:first-of-type {
-  margin-right: 30px;
 }
 
 .card-price__title {
@@ -97,4 +100,56 @@
 
 .card-price__button {
   margin-top: auto;
+}
+
+@media (max-width: $desktop) {
+  .card-price {
+    padding: 29px 19px 0;
+    width: 288px;
+    border-bottom-width: 0;
+  }
+
+  .card-price:hover {
+    padding: 27px 17px 0;
+    border-bottom-width: 0;
+  }
+
+  .card-price__header {
+    flex-direction: column;
+    justify-content: auto;
+    align-items: center;
+  }
+
+  .card-price__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .card-price__text {
+    position: relative;
+    padding-bottom: 10px;
+    margin-top: 11px;
+    margin-bottom: 20px;
+    max-width: 248px;
+  }
+
+  .card-price__list-item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .card-price__offer {
+    max-width: 218px;
+  }
+
+  .card-price__icon-check {
+    margin-right: 8px;
+  }
+
+  .card-price__button {
+    position: relative;
+    left: -20px;
+    width: calc(100% + 40px);
+  }
 }
