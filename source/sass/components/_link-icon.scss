@@ -29,6 +29,8 @@
   }
 }
 
+
+
 .link-icon__text::after {
   position: relative;
   bottom: 8px;
@@ -43,11 +45,6 @@
   align-items: center;
   color: $link-icon-secondary-color;
 
-  .link-icon__svg {
-    fill: none;
-    stroke: $link-icon-secondary-svg-stroke;
-  }
-
   .link-icon__text::after {
     background-color: $link-icon-secondary-color;
   }
@@ -57,7 +54,15 @@
   font-size: 16px;
 
   .link-icon__svg {
+    fill: none;
+    stroke: $link-icon-secondary-svg-stroke;
     margin-right: 11px;
+  }
+}
+
+.link-icon--secondary.link-icon--phone:hover {
+  .link-icon__svg {
+    stroke: $link-icon-hover;
   }
 }
 
@@ -65,6 +70,15 @@
   font-size: 14px;
 
   .link-icon__svg {
+    fill: $link-icon-secondary-svg-stroke;
+    stroke: none;
     margin-right: 15px;
+  }
+}
+
+.link-icon--secondary.link-icon--mail:hover {
+  .link-icon__svg {
+    fill: $link-icon-hover;
+    stroke: none;
   }
 }
