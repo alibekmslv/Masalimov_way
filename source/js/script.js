@@ -23,6 +23,7 @@ const tabs = document.querySelectorAll('[role="tab"]');
 const tabList = document.querySelector('[role="tablist"]');
 
 // Popup Related Vars
+const body = document.body;
 const modalElement = document.querySelector('.modal');
 const modalCloseElement = modalElement.querySelector('.modal__close');
 const countriesElement = document.querySelector('.countries');
@@ -39,8 +40,15 @@ const buyTourPhoneElement = buyTourFormElement.querySelector('[type="tel"]');
 const buyTourEmailElement = buyTourFormElement.querySelector('[type="email"]');
 
 
+// Utils
+const getBodyScrollToTop = () => this.pageYOffset || (document.documentElement && document.documentElement.ScrollTop) || (document.body && document.body.scrollTop);
+
 // Menu
 menuButtonElement.addEventListener('click', () => {
+  body.dataset.scrollY = getBodyScrollToTop();
+  body.style.top = `-${body.dataset.scrollY}px`;
+  body.classList.toggle('page-body--lock');
+
   mainHeaderElement.classList.toggle('main-header--open');
   menuButtonElement.classList.toggle('menu-button--open');
 });
@@ -115,20 +123,6 @@ if (tabs.length > 0) {
   });
 }
 
-// countyCardsElements.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   console.log(e.target, e.currentTarget);
-//   const parentLink = e.target.parentNode;
-//   const tabId = parentLink.dataset.tab;
-//   const countryContainerElement = document.querySelector(`${parentLink.hash}`);
-//   const tabsElement = document.querySelector('.tabs');
-
-//   if (tabId && countryContainerElement) {
-//     changeTabs({ target: document.querySelector(`#${tabId}`)});
-//     tabsElement.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
-//   }
-// });
-
 countryLinks.forEach((link) => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
@@ -148,7 +142,9 @@ countryLinks.forEach((link) => {
 const closeModal = (listenerToRemove) => {
   modalElement.classList.remove('modal--show');
   modalResultElement.classList.remove('modal__result--show');
+  body.classList.remove('page-body--lock');
   window.removeEventListener('keydown', listenerToRemove);
+  window.scrollTo(0, body.dataset.scrollY);
 };
 
 const windowKeydownHandler = (e) => {
@@ -161,8 +157,11 @@ const modalCloseClickHandler = () => {
   closeModal(windowKeydownHandler);
 };
 
-
 const showPopup = () => {
+  body.dataset.scrollY = getBodyScrollToTop();
+  body.style.top = `-${body.dataset.scrollY}px`;
+  body.classList.add('page-body--lock');
+
   modalElement.classList.add('modal--show');
   buyTourPhoneElement.focus();
   window.addEventListener('keydown', windowKeydownHandler);
