@@ -27,6 +27,7 @@
   height: 444px;
   background-color: $modal-window-buy-tour;
   background-image: url("../img/backgrounds/seashore.jpg");
+
   @media (min-resolution: 2dppx) {
     background-image: url("../img/backgrounds/seashore@2x.jpg");
   }
@@ -88,6 +89,7 @@
   .modal__window--buy-tour {
     background-color: transparent;
     background-image: none;
+
     @media (min-resolution: 2dppx) {
       background-image: none;
     }
