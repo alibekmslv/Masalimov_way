@@ -11,6 +11,7 @@
 
 .main-footer__title {
   margin-top: 0;
+  font-weight: 600;
   font-size: 18px;
   line-height: 32px;
   color: $main-footer-title;
@@ -102,7 +103,7 @@
   }
 
   .main-footer__wrapper {
-    grid-template-columns: 395px 331px;
+    grid-template-columns: minmax(auto, 395px) minmax(auto, 331px);
     row-gap: 30px;
   }
 
@@ -188,10 +189,8 @@
     }
   }
 
-  .main-footer__cell--corp-trips {
-    .main-footer__title {
-      white-space: nowrap;
-      max-width: 288px;
-    }
-  }
+  // .main-footer__cell--corp-trips {
+  //   .main-footer__title {
+  //   }
+  // }
 }

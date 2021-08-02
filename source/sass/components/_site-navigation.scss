@@ -1,5 +1,6 @@
 .site-navigation__list {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -26,6 +27,7 @@
 @media (max-width: $desktop) {
   .site-navigation__list {
     flex-direction: column;
+    flex-wrap: nowrap;
   }
 
   .site-navigation__item {

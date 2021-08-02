@@ -16,6 +16,7 @@ const menuButtonElement = mainHeaderElement.querySelector('.menu-button');
 
 // Country Cards Related Vars
 const countyCardsElements = document.querySelector('.places-to-visit__country-cards');
+const countryLinks = countyCardsElements.querySelectorAll('.places-to-visit__link');
 
 // Tabs Related Vars
 const tabs = document.querySelectorAll('[role="tab"]');
@@ -114,16 +115,32 @@ if (tabs.length > 0) {
   });
 }
 
-countyCardsElements.addEventListener('click', (e) => {
-  e.preventDefault();
-  const tabId = e.target.dataset.tab;
-  const countryContainerElement = document.querySelector(`${e.target.hash}`);
-  const tabsElement = document.querySelector('.tabs');
+// countyCardsElements.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   console.log(e.target, e.currentTarget);
+//   const parentLink = e.target.parentNode;
+//   const tabId = parentLink.dataset.tab;
+//   const countryContainerElement = document.querySelector(`${parentLink.hash}`);
+//   const tabsElement = document.querySelector('.tabs');
 
-  if (tabId && countryContainerElement) {
-    changeTabs({ target: document.querySelector(`#${tabId}`)});
-    tabsElement.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
-  }
+//   if (tabId && countryContainerElement) {
+//     changeTabs({ target: document.querySelector(`#${tabId}`)});
+//     tabsElement.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+//   }
+// });
+
+countryLinks.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const tabId = e.currentTarget.dataset.tab;
+    const countryContainerElement = document.querySelector(`${e.currentTarget.hash}`);
+    const tabsElement = document.querySelector('.tabs');
+
+    if (tabId && countryContainerElement) {
+      changeTabs({ target: document.querySelector(`#${tabId}`)});
+      tabsElement.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+    }
+  });
 });
 
 
@@ -147,6 +164,7 @@ const modalCloseClickHandler = () => {
 
 const showPopup = () => {
   modalElement.classList.add('modal--show');
+  buyTourPhoneElement.focus();
   window.addEventListener('keydown', windowKeydownHandler);
 };
 

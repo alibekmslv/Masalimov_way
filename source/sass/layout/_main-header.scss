@@ -16,6 +16,7 @@
   margin-top: 6px;
   margin-right: 72px;
   margin-left: auto;
+  padding-left: 72px;
 }
 
 .main-header__link-icon {
@@ -51,7 +52,14 @@
     display: flex;
     padding-top: 134px;
     padding-left: 0;
-    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $white;
+    z-index: 10;
+    overflow-y: auto;
 
     .main-header__logo {
       display: none;
@@ -68,6 +76,7 @@
     margin-right: 0;
     margin-left: 0;
     flex-grow: 1;
+    padding-left: 0;
   }
 
   .main-header__link-icon {

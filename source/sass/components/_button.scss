@@ -15,6 +15,10 @@
   cursor: pointer;
 }
 
+.button:hover {
+  background-color: $button-bg-color-hover;
+}
+
 .button__svg {
   fill: none;
 }
@@ -27,6 +31,10 @@
   border: 1px solid $button-transparent-border-color;
   background-color: transparent;
   cursor: pointer;
+}
+
+.button--transparent:hover {
+  background-color: transparent;
 }
 
 .button--small {

@@ -1,24 +1,25 @@
 $black: #000000;
-$bittersweet: #fe7867;
-$jaffa: #f17d4b;
-$woodsmoke: #131416;
-$woodsmoke-half: #13141680;
-$woodsmoke-60: #13141699;
-$woodsmoke-70: #131416b3;
-$charad: #2c2e3f;
-$charad-30: #2c2e3f4d;
-$abbey: #48494c;
-$soft-peach: #fbf8f8;
-$white: #ffffff;
-$mischka: #d7d9df;
-$white-70: #ffffffb3;
+$bittersweet: #FE7865;
+$jaffa: #F17D4B;
+$woodsmoke: #141517;
+$woodsmoke-half: #14151780;
+$woodsmoke-60: #14151799;
+$woodsmoke-70: #141517b3;
+$charad: #2C2E3F;
+$charad-30: #2C2E3F4d;
+$abbey: #48494D;
+$soft-peach: #FBF8F8;
+$white: #FFFFFF;
+$mischka: #D7D9DF;
+$white-70: #FFFFFFB3;
 
 // Background's fallback colors
-$section-feedback-bg-color: #ef7371;
+$site-banner-bg-color: #5583A9;
+$section-feedback-bg-color: #EF7371;
 $modal-window-buy-tour: #518ca9;
 
 // Box shadows
-$feedback-form-box-shadow: #2936421a;
+$feedback-form-box-shadow: #2936421A;
 
 // Purpose
 $site-navigation-link: $woodsmoke;
@@ -36,6 +37,7 @@ $link-icon-secondary-color: $bittersweet;
 $link-icon-secondary-svg-stroke: $mischka;
 $footer-separator-color: $mischka;
 $button-bg-color: $bittersweet;
+$button-bg-color-hover: $jaffa;
 $site-banner-text-dark: $charad;
 $button-transparent-border-color: $white-70;
 $heading-color: $charad;

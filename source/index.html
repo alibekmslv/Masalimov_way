@@ -53,7 +53,7 @@
         <h2 class="site-banner__title">Путешeствие по Европе</h2>
         <p class="site-banner__text">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а
           также потрясающая красота природы.</p>
-        <a class="button button--icon site-banner__button" href="#">Смотреть тур
+        <a class="button button--icon site-banner__button" href="#countries">Смотреть тур
           <svg class="button__svg" width="14" height="14">
             <use xlink:href="img/sprite.svg#arrow-secondary-down"></use>
           </svg>
@@ -65,7 +65,7 @@
       <p class="paragraph places-to-visit__paragraph">Вы можете выбрать полный тур или частичный, с посещением первых 3
         мест</p>
       <div class="places-to-visit__country-cards">
-        <div class="places-to-visit__link">
+        <a class="places-to-visit__link" href="#panel-greece" data-tab="tab-greece">
           <div class="country-card">
             <picture>
               <source type="image/webp" media="(max-width: 1023px)"
@@ -79,11 +79,10 @@
                 alt="Вилла на скале на фоне гор" />
             </picture>
             <span class="country-card__title">Греция</span>
-            <a class="button button--transparent country-card__button" href="#panel-greece"
-              data-tab="tab-greece">Смотреть подробнее</a>
+            <span class="button button--transparent country-card__button">Смотреть подробнее</span>
           </div>
-        </div>
-        <div class="places-to-visit__link">
+        </a>
+        <a class="places-to-visit__link" href="#panel-albania" data-tab="tab-albania">
           <div class="country-card">
             <picture>
               <source type="image/webp" media="(max-width: 1023px)"
@@ -97,11 +96,10 @@
                 alt="Вид на пляж и лазурный берег сверху" />
             </picture>
             <span class="country-card__title">Албания</span>
-            <a class="button button--transparent country-card__button" href="#panel-albania"
-              data-tab="tab-albania">Смотреть подробнее</a>
+            <span class="button button--transparent country-card__button">Смотреть подробнее</span>
           </div>
-        </div>
-        <div class="places-to-visit__link">
+        </a>
+        <a class="places-to-visit__link" href="#panel-macedonia" data-tab="tab-macedonia">
           <div class="country-card">
             <picture>
               <source type="image/webp" media="(max-width: 1023px)"
@@ -115,11 +113,10 @@
                 alt="Церковь на фоне моря" />
             </picture>
             <span class="country-card__title">Македония</span>
-            <a class="button button--transparent country-card__button" href="#panel-macedonia"
-              data-tab="tab-macedonia">Смотреть подробнее</a>
+            <span class="button button--transparent country-card__button">Смотреть подробнее</span>
           </div>
-        </div>
-        <div class="places-to-visit__link">
+        </a>
+        <a class="places-to-visit__link" href="#panel-montenegro" data-tab="tab-montenegro">
           <div class="country-card">
             <picture>
               <source type="image/webp" media="(max-width: 1023px)"
@@ -133,11 +130,10 @@
                 alt="Вид сверху на лазурную реки и лес" />
             </picture>
             <span class="country-card__title">Черногория</span>
-            <a class="button button--transparent country-card__button" href="#panel-montenegro"
-              data-tab="tab-montenegro">Смотреть подробнее</a>
+            <span class="button button--transparent country-card__button">Смотреть подробнее</span>
           </div>
-        </div>
-        <div class="places-to-visit__link">
+        </a>
+        <a class="places-to-visit__link" href="#panel-croatia" data-tab="tab-croatia">
           <div class="country-card">
             <picture>
               <source type="image/webp" media="(max-width: 1023px)"
@@ -151,13 +147,12 @@
                 alt="Сталактиты в пещере" />
             </picture>
             <span class="country-card__title">Хорватия</span>
-            <a class="button button--transparent country-card__button" href="#panel-croatia"
-              data-tab="tab-croatia">Смотреть подробнее</a>
+            <span class="button button--transparent country-card__button">Смотреть подробнее</span>
           </div>
-        </div>
+        </a>
       </div>
     </section>
-    <section class="countries">
+    <section class="countries" id="countries">
       <div class="tabs">
         <div class="container tabs__container">
           <div class="tabs__list" role="tablist" aria-label="Список стран">
@@ -185,7 +180,7 @@
         </div>
         <div class="tabs__tabpanel tabs__tabpanel--active" id="panel-greece" role="tabpanel" tabindex="0"
           aria-labelledby="tab-greece">
-          <div class="country container country__container">
+          <div class="country container">
             <div class="country__content">
               <h3 class="heading country__heading">Греция</h3>
               <p class="paragraph country__paragraph">
@@ -236,7 +231,7 @@
           </div>
         </div>
         <div class="tabs__tabpanel" id="panel-albania" role="tabpanel" tabindex="0" aria-labelledby="tab-greece" hidden>
-          <div class="country container country__container">
+          <div class="country container">
             <div class="country__content">
               <h3 class="heading country__heading">Албания</h3>
               <p class="paragraph country__paragraph">
@@ -276,7 +271,7 @@
         </div>
         <div class="tabs__tabpanel" id="panel-macedonia" role="tabpanel" tabindex="0" aria-labelledby="tab-macedonia"
           hidden>
-          <div class="country container country__container">
+          <div class="country container">
             <div class="country__content">
               <h3 class="heading country__heading">Македония</h3>
               <p class="paragraph country__paragraph">
@@ -316,7 +311,7 @@
         </div>
         <div class="tabs__tabpanel" id="panel-montenegro" role="tabpanel" tabindex="0" aria-labelledby="tab-montenegro"
           hidden>
-          <div class="country container country__container">
+          <div class="country container">
             <div class="country__content">
               <h3 class="heading country__heading">Черногория</h3>
               <p class="paragraph country__paragraph">
@@ -353,7 +348,7 @@
         </div>
         <div class="tabs__tabpanel" id="panel-croatia" role="tabpanel" tabindex="0" aria-labelledby="tab-croatia"
           hidden>
-          <div class="country container country__container">
+          <div class="country container">
             <div class="country__content">
               <h3 class="heading country__heading">Хорватия</h3>
               <p class="paragraph country__paragraph">
@@ -494,7 +489,8 @@
             <div class="feedback-form__inputs">
               <label class="input input--tel input--required">
                 <span class="visually-hidden">Номер телефона</span>
-                <input class="input__field" name="phoneNumber" type="tel" minlength="10" maxlength="10" pattern="^[0-9]*$" placeholder="Введите 10 цифр номера" required>
+                <input class="input__field" name="phoneNumber" type="tel" minlength="10" maxlength="10"
+                  pattern="^[0-9]*$" placeholder="Введите 10 цифр номера" required>
                 <span class="input__validation-text">Данные не верны</span>
               </label>
               <label class="input">
@@ -560,7 +556,7 @@
       </div>
     </section>
   </footer>
-  <section class="modal"> <!-- modal--show -->
+  <section class="modal">
     <div class="modal__window modal__window--buy-tour">
       <div class="popup-form modal__popup-form">
         <h2 class="popup-form__title">Купить тур</h2>
@@ -568,7 +564,8 @@
           <div class="popup-form__inputs">
             <label class="input input--tel input--required">
               <span class="visually-hidden">Номер телефона</span>
-              <input class="input__field" name="phoneNumber" type="tel" minlength="10" maxlength="10" pattern="^[0-9]*$" placeholder="Введите 10 цифр номера" required>
+              <input class="input__field" name="phoneNumber" type="tel" minlength="10" maxlength="10" pattern="^[0-9]*$"
+                placeholder="Введите 10 цифр номера" required>
               <span class="input__validation-text">Данные не верны</span>
             </label>
             <label class="input">
@@ -580,7 +577,7 @@
           <button class="button button--small popup-form__button" type="submit">Отправить</button>
         </form>
       </div>
-      <div class="modal__result"> <!-- modal__result--show -->
+      <div class="modal__result">
         <p class="modal__success-text">Форма успешно отправлена, спасибо! :)</p>
       </div>
       <button class="modal__close" aria-label="Закрыть окно">

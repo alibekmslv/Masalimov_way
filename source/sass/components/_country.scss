@@ -39,6 +39,10 @@
 }
 
 @media (max-width: $desktop-container) {
+  .country {
+    grid-template-columns: auto minmax(600px, 650px);
+  }
+
   .country__feedback {
     right: 0;
   }
@@ -47,10 +51,9 @@
 @media (max-width: $desktop) {
   .country {
     display: block;
+    grid-template-columns: none;
+    grid-template-rows: none;
     margin-bottom: 30px;
-  }
-
-  .country__container {
     padding: 0;
     max-width: none;
     width: auto;

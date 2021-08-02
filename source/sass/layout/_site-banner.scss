@@ -1,5 +1,6 @@
 .site-banner {
-  height: 860px;
+  min-height: 860px;
+  background-color: $site-banner-bg-color;
   background-image: url("../img/backgrounds/site-banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,6 +26,7 @@
   line-height: 80px;
   letter-spacing: -1.11px;
   color: $white;
+  word-wrap: break-word;
 }
 
 .site-banner__text {
@@ -45,7 +47,7 @@
 
 @media (max-width: $desktop) {
   .site-banner {
-    height: 344px;
+    min-height: 344px;
     background-image: url("../img/backgrounds/site-banner-tablet.jpg");
 
 
@@ -122,6 +124,6 @@
   }
 
   .site-banner__button {
-    width: 100%;
+    width: 288px;
   }
 }
