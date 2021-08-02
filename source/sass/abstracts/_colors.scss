@@ -1,23 +1,24 @@
-$black: hsl(0, 0%, 0%);
-$bittersweet: hsl(7, 99%, 70%);
-$jaffa: hsl(18, 86%, 62%);
-$woodsmoke: hsl(220, 7%, 8%);
-$woodsmoke-half: hsl(220, 7%, 8%, 0.5);
-$woodsmoke-60: hsla(234, 8%, 9%, 0.6);
-$woodsmoke-70: hsl(220, 7%, 8%, 0.7);
-$charad: hsl(234, 18%, 21%);
-$charad-30: hsl(234, 18%, 21%, 0.3);
-$abbey: hsl(228, 3%, 29%);
-$soft-peach: hsl(0, 27%, 98%);
-$white: hsl(0, 0%, 100%);
-$mischka: hsl(225, 11%, 86%);
-$white-70: hsla(0, 0%, 100%, 0.7);
+$black: #000000;
+$bittersweet: #fe7867;
+$jaffa: #f17d4b;
+$woodsmoke: #131416;
+$woodsmoke-half: #13141680;
+$woodsmoke-60: #13141699;
+$woodsmoke-70: #131416b3;
+$charad: #2c2e3f;
+$charad-30: #2c2e3f4d;
+$abbey: #48494c;
+$soft-peach: #fbf8f8;
+$white: #ffffff;
+$mischka: #d7d9df;
+$white-70: #ffffffb3;
 
 // Background's fallback colors
-$section-feedback-bg-color: hsl(1, 80%, 69%);
+$section-feedback-bg-color: #ef7371;
+$modal-window-buy-tour: #518ca9;
 
 // Box shadows
-$feedback-form-box-shadow: hsla(209, 24%, 21%, 0.1);
+$feedback-form-box-shadow: #2936421a;
 
 // Purpose
 $site-navigation-link: $woodsmoke;
