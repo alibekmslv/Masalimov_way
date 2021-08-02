@@ -26,7 +26,7 @@
     left: 26px;
     top: 15px;
     display: inline;
-    content: '+7';
+    content: "+7";
     font-size: 14px;
     line-height: 17px;
     color: $input-color;
@@ -36,7 +36,6 @@
     padding-left: 50px;
   }
 }
-
 
 .input__field {
   box-sizing: border-box;
@@ -58,7 +57,6 @@
 }
 
 .input--invalid {
-
   .input__field {
     border-color: $input-invalid-color;
   }
@@ -68,8 +66,6 @@
   }
 }
 
-
-
 .input__validation-text {
   position: absolute;
   top: -15px;
@@ -78,4 +74,10 @@
   line-height: 15px;
   display: none;
   color: $input-invalid-color;
+}
+
+@media (max-width: $desktop) {
+  .input__field {
+    width: 288px;
+  }
 }
