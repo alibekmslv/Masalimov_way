@@ -1,0 +1,34 @@
+.popup-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .input__field {
+    width: 270px;
+    background-color: $white;
+  }
+}
+
+.popup-form__inputs {
+  display: grid;
+  row-gap: 20px;
+  margin-bottom: 20px;
+}
+
+.popup-form__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 43px;
+  color: $popup-form-title-color;
+}
+
+
+@media (max-width: $tablet) {
+  .popup-form {
+    .input__field {
+      width: 288px;
+    }
+  }
+}

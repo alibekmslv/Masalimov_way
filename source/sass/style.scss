@@ -22,6 +22,7 @@
 @import "./components/card-price";
 @import "./components/feedback-form";
 @import "./components/input";
+@import "./components/popup-form";
 
 // Layout
 @import "./layout/main-header";
@@ -31,6 +32,7 @@
 @import "./layout/countries";
 @import "./layout/prices";
 @import "./layout/section-feedback";
+@import "./layout/modal";
 
 //State
 @import "./state/no-js.scss";

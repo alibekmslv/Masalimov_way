@@ -1,0 +1,100 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  // background-color: hsla(0, 0%, 25%, 0.53);
+
+  &--show {
+    display: flex;
+  }
+}
+
+.modal__window {
+  position: relative;
+  width: 728px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal__window--buy-tour {
+  height: 444px;
+  background-color: $modal-window-buy-tour;
+  background-image: url("../img/backgrounds/seashore.jpg");
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/backgrounds/seashore@2x.jpg");
+  }
+}
+
+.modal__popup-form {
+  padding-top: 72px;
+  padding-right: 60px;
+  padding-left: 60px;
+  background-color: $modal-popup-form-bg-color;
+}
+
+.modal__close {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.modal__result {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $modal-result-bg-color;
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  &--show {
+    display: flex;
+  }
+}
+
+.modal__success-text {
+  max-width: 399px;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 43px;
+  text-align: center;
+  color: $modal-success-text-color;
+}
+
+@media (max-width: $tablet) {
+  .modal {
+    background-color: $white;
+    align-items: flex-start;
+    padding-top: 100px;
+  }
+
+  .modal__window {
+    position: static;
+    width: auto;
+  }
+
+  .modal__window--buy-tour {
+    background-color: transparent;
+    background-image: none;
+    @media (min-resolution: 2dppx) {
+      background-image: none;
+    }
+  }
+
+  .modal__popup-form {
+    padding: 0;
+    background-color: transparent;
+  }
+}

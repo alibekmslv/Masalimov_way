@@ -562,6 +562,36 @@
       </div>
     </section>
   </footer>
+  <section class="modal modal--show">
+    <div class="modal__window modal__window--buy-tour">
+      <div class="popup-form modal__popup-form">
+        <h2 class="popup-form__title">Купить тур</h2>
+        <form action="#" method="post">
+          <div class="popup-form__inputs">
+            <label class="input input--tel input--required">
+              <span class="visually-hidden">Номер телефона</span>
+              <input class="input__field" name="phoneNumber" type="tel" placeholder="Введите 10 цифр номера" required>
+              <span class="input__validation-text">Данные не верны</span>
+            </label>
+            <label class="input">
+              <span class="visually-hidden">Электронная почта</span>
+              <input class="input__field" name="email" type="email" placeholder="E-mail">
+              <span class="input__validation-text">Данные не верны</span>
+            </label>
+          </div>
+          <button class="button button--small popup-form__button" type="submit">Отправить</button>
+        </form>
+      </div>
+      <div class="modal__result modal__result--show">
+        <p class="modal__success-text">Форма успешно отправлена, спасибо! :)</p>
+      </div>
+      <button class="modal__close" aria-label="Закрыть окно">
+        <svg class="modal__close-svg" width="22" height="22">
+          <use class="modal__close-cross" xlink:href="img/sprite.svg#cross"></use>
+        </svg>
+      </button>
+    </div>
+  </section>
   <script src="js/script.js"></script>
 </body>
 
