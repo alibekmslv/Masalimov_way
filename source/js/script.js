@@ -6,6 +6,7 @@ const KeyCode = {
   ESCAPE: 27,
 };
 const TAB_SCROLL_OFFSET = 60;
+const TEL_LENGHT = 10;
 
 const noJsElement = document.querySelector('.no-js');
 noJsElement.classList.remove('no-js');
@@ -60,7 +61,7 @@ mainHeaderElement.addEventListener('click', (e) => {
     window.scrollTo(0, body.dataset.scroolY);
     mainHeaderElement.classList.remove('main-header--open');
     menuButtonElement.classList.remove('menu-button--open');
-    document.querySelector(e.target.hash).scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+    document.querySelector(e.target.hash).scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
   }
 });
 
@@ -133,8 +134,8 @@ countryLinks.forEach((link) => {
     const tabsElement = document.querySelector('.tabs');
 
     if (tabId && countryContainerElement) {
-      changeTabs({ target: document.querySelector(`#${tabId}`)});
-      tabsElement.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+      changeTabs({ target: document.querySelector(`#${tabId}`) });
+      tabsElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
     }
   });
 });
@@ -200,7 +201,7 @@ const checkPhoneValidity = (phoneElement) => {
 const checkEmailValidity = (emailElement) => {
   const inputElement = emailElement.parentNode;
 
-  if(!emailElement.validity.valid) {
+  if (!emailElement.validity.valid) {
     inputElement.classList.add('input--invalid');
   } else {
     inputElement.classList.remove('input--invalid');
@@ -215,50 +216,56 @@ const showSuccessPopup = () => {
   modalResultElement.classList.add('modal__result--show');
 };
 
-const resetForms = () => {
-  feedbackFormElement.reset();
-  buyTourFormElement.reset();
-};
-
-feedbackPhoneElement.value = localStorage.getItem('phoneNumber');
-feedbackEmailElement.value = localStorage.getItem('email');
+// feedbackPhoneElement.value = localStorage.getItem('feedbackPhoneNumber');
+feedbackPhoneElement.setAttribute('value', localStorage.getItem('feedbackPhoneNumber'));
+feedbackEmailElement.value = localStorage.getItem('feedbackEmail');
 
 feedbackFormElement.addEventListener('submit', (e) => {
   e.preventDefault();
-  resetForms();
-  showSuccessPopup();
+
+  if (feedbackPhoneElement.value.length === TEL_LENGHT) {
+    localStorage.setItem('feedbackPhoneNumber', '');
+    localStorage.setItem('feedbackEmail', '');
+    feedbackFormElement.reset();
+    showSuccessPopup();
+  } else {
+    feedbackPhoneElement.parentNode.classList.add('input--invalid');
+  }
 });
 
 feedbackPhoneElement.addEventListener('input', (e) => {
   checkPhoneValidity(feedbackPhoneElement);
-  localStorage.setItem('phoneNumber', e.target.value);
-  buyTourPhoneElement.value = e.target.value;
+  localStorage.setItem('feedbackPhoneNumber', e.target.value);
 });
 
 feedbackEmailElement.addEventListener('input', (e) => {
   checkEmailValidity(feedbackEmailElement);
-  localStorage.setItem('email', e.target.value);
-  buyTourEmailElement.value = e.target.value;
+  localStorage.setItem('feedbackEmail', e.target.value);
 });
 
 // Buy Tour Form
-buyTourPhoneElement.value = localStorage.getItem('phoneNumber');
-buyTourEmailElement.value = localStorage.getItem('email');
+buyTourPhoneElement.value = localStorage.getItem('buyTourPhoneNumber');
+buyTourEmailElement.value = localStorage.getItem('buyTourEmail');
 
 buyTourPhoneElement.addEventListener('input', (e) => {
   checkPhoneValidity(buyTourPhoneElement);
-  localStorage.setItem('phoneNumber', e.target.value);
-  feedbackPhoneElement.value = e.target.value;
+  localStorage.setItem('buyTourPhoneNumber', e.target.value);
 });
 
 buyTourEmailElement.addEventListener('input', (e) => {
   checkEmailValidity(buyTourEmailElement);
-  localStorage.setItem('email', e.target.value);
-  feedbackEmailElement.value = e.target.value;
+  localStorage.setItem('buyTourEmail', e.target.value);
 });
 
 buyTourFormElement.addEventListener('submit', (e) => {
   e.preventDefault();
-  resetForms();
-  showSuccessPopup();
+
+  if (buyTourPhoneElement.value.length === TEL_LENGHT) {
+    localStorage.setItem('buyTourPhoneNumber', '');
+    localStorage.setItem('buyTourEmail', '');
+    buyTourFormElement.reset();
+    showSuccessPopup();
+  } else {
+    buyTourPhoneElement.parentNode.classList.add('input--invalid');
+  }
 });
