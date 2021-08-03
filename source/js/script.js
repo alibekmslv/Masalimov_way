@@ -56,6 +56,8 @@ menuButtonElement.addEventListener('click', () => {
 mainHeaderElement.addEventListener('click', (e) => {
   if (e.target.classList.contains('site-navigation__link')) {
     e.preventDefault();
+    body.classList.remove('page-body--lock');
+    window.scrollTo(0, body.dataset.scroolY);
     mainHeaderElement.classList.remove('main-header--open');
     menuButtonElement.classList.remove('menu-button--open');
     document.querySelector(e.target.hash).scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
@@ -142,9 +144,7 @@ countryLinks.forEach((link) => {
 const closeModal = (listenerToRemove) => {
   modalElement.classList.remove('modal--show');
   modalResultElement.classList.remove('modal__result--show');
-  body.classList.remove('page-body--lock');
   window.removeEventListener('keydown', listenerToRemove);
-  window.scrollTo(0, body.dataset.scrollY);
 };
 
 const windowKeydownHandler = (e) => {
@@ -158,10 +158,6 @@ const modalCloseClickHandler = () => {
 };
 
 const showPopup = () => {
-  body.dataset.scrollY = getBodyScrollToTop();
-  body.style.top = `-${body.dataset.scrollY}px`;
-  body.classList.add('page-body--lock');
-
   modalElement.classList.add('modal--show');
   buyTourPhoneElement.focus();
   window.addEventListener('keydown', windowKeydownHandler);

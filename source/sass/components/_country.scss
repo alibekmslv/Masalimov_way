@@ -30,7 +30,7 @@
 
 .country__img {
   display: block;
-  width: auto;
+  width: 430px;
   height: 100%;
 }
 
@@ -45,6 +45,12 @@
 
   .country__feedback {
     right: 0;
+  }
+
+  .country__img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -70,17 +76,20 @@
 
   .country__paragraph {
     margin-right: 0;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
   }
 
   .country__button {
     margin-bottom: 30px;
+    min-width: 250px;
+    line-height: 12px;
+    letter-spacing: 2px;
   }
 
   .country__feedback {
     right: auto;
     top: auto;
-    bottom: -30px;
+    bottom: -34px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -99,6 +108,10 @@
 
   .country__content {
     padding: 0 16px;
+  }
+
+  .country__paragraph {
+    margin-bottom: 20px;
   }
 
   .country__feedback {

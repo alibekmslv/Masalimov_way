@@ -1,12 +1,13 @@
 .main-footer {
-  margin-top: 80px;
+  margin-top: 160px;
   padding-bottom: 72px;
 }
 
 .main-footer__wrapper {
   display: grid;
   align-items: start;
-  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: start;
+  grid-template-columns: 1fr minmax(auto, 395px) 1fr;
 }
 
 .main-footer__title {
@@ -25,7 +26,7 @@
   border-left-width: 1px;
   border-style: solid;
   border-color: $footer-separator-color;
-  padding-right: 65px;
+  justify-self: stretch;
   padding-left: 65px;
 
   .main-footer__title {
@@ -35,7 +36,8 @@
 
 .main-footer__cell--next-trips {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, auto);
+  column-gap: 50px;
 
   .main-footer__title {
     grid-column: 1 / -1;
@@ -52,10 +54,11 @@
 
 .main-footer__list-item {
   font-size: 14px;
+  line-height: 17px;
   color: $main-footer-list-item;
 
   &:not(:last-child) {
-    margin-bottom: 11px;
+    margin-bottom: 10px;
   }
 }
 
@@ -64,10 +67,11 @@
 }
 
 .main-footer__cell--corp-trips {
-  margin-right: 11px;
-  padding-left: 65px;
+  padding-right: 11px;
+  padding-left: 55px;
 
   .main-footer__title {
+    display: inline-block;
     margin-bottom: 20px;
   }
 }
@@ -86,8 +90,13 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+  .main-footer__cell--next-trips {
+    justify-self: stretch;
+    column-gap: normal;
+  }
+
   .main-footer__cell--contacts {
-    padding-right: 30px;
+    padding-right: 0;
     padding-left: 30px;
   }
 
@@ -99,6 +108,7 @@
 
 @media (max-width: $desktop) {
   .main-footer {
+    margin-top: 80px;
     padding-bottom: 55px;
   }
 
@@ -108,8 +118,6 @@
   }
 
   .main-footer__cell--next-trips {
-    margin-right: 10px;
-
     .main-footer__title {
       margin-bottom: 20px;
     }
@@ -129,6 +137,7 @@
     border-top-style: solid;
     margin-right: 0;
     padding-top: 30px;
+    padding-right: 0;
     padding-left: 0;
     text-align: center;
 
@@ -144,6 +153,7 @@
 
 @media (max-width: $tablet) {
   .main-footer {
+    margin-top: 60px;
     padding-bottom: 26px;
   }
 
@@ -189,8 +199,7 @@
     }
   }
 
-  // .main-footer__cell--corp-trips {
-  //   .main-footer__title {
-  //   }
-  // }
+  .main-footer__cell--corp-trips {
+    margin-top: -8px;
+  }
 }
