@@ -5,11 +5,13 @@
   background-color: $white;
 }
 
-.feedback .feedback__paragraph {
+.feedback__paragraph {
   margin-top: 0;
   margin-bottom: 35px;
   padding-top: 20px;
+}
 
+.feedback .feedback__paragraph {
   &::before {
     position: relative;
     top: -20px;
@@ -49,14 +51,39 @@
 
 @media (max-width: $tablet) {
   .feedback {
+    bottom: -65px;
+    padding: 30px 20px 34px;
     width: 268px;
     text-align: center;
   }
 
   .feedback .feedback__paragraph {
+    margin-bottom: 16px;
+
     &::before {
       left: 50%;
       transform: translateX(-50%);
     }
+  }
+
+  .feedback__heading {
+    margin-bottom: 13px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .feedback__paragraph {
+    margin-bottom: 16px;
+  }
+
+  .feedback__author {
+    margin-left: 10px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .feedback__author-img {
+    margin-bottom: 10px;
   }
 }

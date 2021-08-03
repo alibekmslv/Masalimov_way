@@ -31,12 +31,14 @@
 }
 
 @media (max-width: $desktop) {
-  .feedback-form {
-    max-width: 658px;
+  .feedback-form__inputs {
+    margin-bottom: 20px;
   }
 
   .feedback-form__button {
     min-width: 250px;
+    line-height: 12px;
+    letter-spacing: 2px;
   }
 }
 

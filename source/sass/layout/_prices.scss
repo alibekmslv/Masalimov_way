@@ -1,5 +1,5 @@
 .prices {
-  margin-top: -234px;
+  margin-top: -275px;
 
   .card-price:not(:last-of-type) {
     margin-right: 30px;
@@ -14,7 +14,7 @@
 .prices__info {
   grid-column: 2 / -1;
   justify-self: end;
-  margin-top: 117px;
+  margin-top: 113px;
   width: 310px;
 }
 
@@ -32,17 +32,20 @@
 }
 
 .prices__paragraph {
-  margin-top: 20px;
+  margin-top: 12px;
   margin-bottom: 60px;
   margin-left: 4px;
   width: 306px;
-  line-height: 26px;
+  line-height: 27px;
   letter-spacing: normal;
+}
+.prices__heading + .prices__paragraph::before {
+  width: 175px;
 }
 
 .prices__contact {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 13px;
   font-weight: 500;
   font-size: 22px;
   line-height: 34px;
@@ -51,9 +54,12 @@
 }
 
 .prices__link-icon {
+  font-size: 20px;
+
   .link-icon__svg {
     fill: none;
     stroke: $bittersweet;
+    margin-right: 21px;
   }
 }
 
@@ -79,7 +85,6 @@
     grid-column: auto;
     grid-row: 2 / 3;
     justify-self: center;
-    // display: flex;
   }
 
   .prices__paragraph {
@@ -104,16 +109,24 @@
     text-align: center;
   }
 
+  .prices__heading {
+    line-height: 45px;
+  }
+
   .prices__paragraph {
+    margin-top: 22px;
+    margin-bottom: 34px;
     width: auto;
   }
 
   .prices__contact {
+    font-size: 18px;
     margin-bottom: 10px;
     text-align: inherit;
   }
 
   .prices__link-icon {
+    font-size: 18px;
     justify-content: center;
 
     .link-icon__text {
@@ -128,6 +141,10 @@
       display: none;
     }
   }
+
+  .prices .card-price:not(:last-of-type) {
+    margin-right: 50px;
+  }
 }
 
 @media (max-width: $tablet) {
@@ -141,6 +158,10 @@
     .card-price {
       margin-bottom: 30px;
     }
+
+    .card-price:last-of-type {
+      margin-bottom: 50px;
+    }
   }
 
   .prices__heading {
@@ -148,6 +169,7 @@
   }
 
   .prices__paragraph {
+    margin-top: 20px;
     margin-bottom: 20px;
     line-height: 27.2px;
   }
@@ -157,8 +179,6 @@
   }
 
   .prices__card-prices {
-    justify-content: space-evenly;
-    justify-self: auto;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 }

@@ -5,6 +5,8 @@
 .section-feedback__wrapper {
   display: flex;
   justify-content: flex-end;
+  align-items: flex-start;
+  min-height: 455px;
   background-image: url("../img/backgrounds/ruby-red-sunset-desktop.jpg"),
     linear-gradient(to right, $section-feedback-bg-color 0%, $section-feedback-bg-color 840px, transparent 840px, transparent 100%);
   background-size: contain;
@@ -19,11 +21,11 @@
 
 .section-feedback__feedback-form {
   margin-top: 70px;
-  margin-bottom: 70px;
 }
 
 @media (max-width: $desktop) {
   .section-feedback {
+    margin-top: 110px;
     background-color: $section-feedback-bg-color;
     background-image: url("../img/backgrounds/ruby-red-sunset-tablet.jpg");
     background-repeat: no-repeat;
@@ -37,14 +39,22 @@
 
   .section-feedback__feedback-form {
     margin-top: 70px;
-    margin-bottom: 74px;
   }
 }
 
 @media (max-width: $tablet) {
+
+  .section-feedback__wrapper {
+    min-height: 441px;
+  }
+
   .section-feedback {
     margin-top: 0;
     background-image: none;
     background-color: $section-feedback-bg-color-mobile;
+  }
+
+  .section-feedback__feedback-form {
+    margin-top: 50px;
   }
 }

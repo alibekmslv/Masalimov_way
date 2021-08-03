@@ -23,6 +23,7 @@ const tabs = document.querySelectorAll('[role="tab"]');
 const tabList = document.querySelector('[role="tablist"]');
 
 // Popup Related Vars
+const body = document.body;
 const modalElement = document.querySelector('.modal');
 const modalCloseElement = modalElement.querySelector('.modal__close');
 const countriesElement = document.querySelector('.countries');
@@ -39,8 +40,15 @@ const buyTourPhoneElement = buyTourFormElement.querySelector('[type="tel"]');
 const buyTourEmailElement = buyTourFormElement.querySelector('[type="email"]');
 
 
+// Utils
+const getBodyScrollToTop = () => this.pageYOffset || (document.documentElement && document.documentElement.ScrollTop) || (document.body && document.body.scrollTop);
+
 // Menu
 menuButtonElement.addEventListener('click', () => {
+  body.dataset.scrollY = getBodyScrollToTop();
+  body.style.top = `-${body.dataset.scrollY}px`;
+  body.classList.toggle('page-body--lock');
+
   mainHeaderElement.classList.toggle('main-header--open');
   menuButtonElement.classList.toggle('menu-button--open');
 });
@@ -48,6 +56,8 @@ menuButtonElement.addEventListener('click', () => {
 mainHeaderElement.addEventListener('click', (e) => {
   if (e.target.classList.contains('site-navigation__link')) {
     e.preventDefault();
+    body.classList.remove('page-body--lock');
+    window.scrollTo(0, body.dataset.scroolY);
     mainHeaderElement.classList.remove('main-header--open');
     menuButtonElement.classList.remove('menu-button--open');
     document.querySelector(e.target.hash).scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
@@ -115,20 +125,6 @@ if (tabs.length > 0) {
   });
 }
 
-// countyCardsElements.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   console.log(e.target, e.currentTarget);
-//   const parentLink = e.target.parentNode;
-//   const tabId = parentLink.dataset.tab;
-//   const countryContainerElement = document.querySelector(`${parentLink.hash}`);
-//   const tabsElement = document.querySelector('.tabs');
-
-//   if (tabId && countryContainerElement) {
-//     changeTabs({ target: document.querySelector(`#${tabId}`)});
-//     tabsElement.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
-//   }
-// });
-
 countryLinks.forEach((link) => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
@@ -160,7 +156,6 @@ const windowKeydownHandler = (e) => {
 const modalCloseClickHandler = () => {
   closeModal(windowKeydownHandler);
 };
-
 
 const showPopup = () => {
   modalElement.classList.add('modal--show');

@@ -9,6 +9,12 @@
   width: 370px;
 }
 
+.card-price--complex {
+  .card-price__list-item:first-of-type {
+    margin-bottom: 6px;
+  }
+}
+
 .card-price:hover {
   border-width: 3px;
   border-color: $card-price-border-color-hover;
@@ -50,7 +56,7 @@
 .card-price__text {
   position: relative;
   padding-bottom: 28px;
-  margin-top: 36px;
+  margin-top: 42px;
   margin-bottom: 30px;
   max-width: 289px;
   font-size: 16px;
@@ -63,7 +69,7 @@
     display: block;
     content: "";
     height: 1px;
-    width: 100%;
+    width: 310px;
     background-color: $card-price-separator;
   }
 }
@@ -92,7 +98,7 @@
 
 .card-price__icon-check {
   margin-top: 5px;
-  margin-right: 16px;
+  margin-right: 8px;
   display: block;
   flex-shrink: 0;
   fill: $card-price-icon-check-fill;
@@ -128,9 +134,14 @@
   .card-price__text {
     position: relative;
     padding-bottom: 10px;
-    margin-top: 11px;
+    margin-top: 10px;
     margin-bottom: 20px;
     max-width: 248px;
+    text-align: center;
+
+    &::after {
+      width: 100%;
+    }
   }
 
   .card-price__list-item {
@@ -151,5 +162,15 @@
     position: relative;
     left: -20px;
     width: calc(100% + 40px);
+    line-height: 12px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .card-price--complex {
+    .card-price__list {
+      margin-bottom: 44px;
+    }
   }
 }
