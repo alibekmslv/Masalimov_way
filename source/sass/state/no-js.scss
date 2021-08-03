@@ -1,8 +1,32 @@
+.no-js {
+  .tabs__list {
+    display: none;
+  }
+
+  .tabs__tabpanel {
+    display: block;
+    margin-bottom: 80px;
+  }
+
+  .modal {
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    position: static;
+    display: block;
+  }
+
+  .modal__close {
+    display: none;
+  }
+}
+
 @media (max-width: $desktop) {
   .no-js {
     .main-header {
       display: flex;
-      padding-top: 134px;
+      padding-top: 50px;
+      padding-bottom: 50px;
       padding-left: 0;
     }
 

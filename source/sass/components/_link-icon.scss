@@ -3,6 +3,7 @@
   align-items: flex-end;
   font-size: 18px;
   line-height: 32px;
+  text-decoration: none;
   color: $link-icon;
 }
 
@@ -28,7 +29,6 @@
     margin-right: 9px;
   }
 }
-
 
 
 .link-icon__text::after {

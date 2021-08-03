@@ -7,6 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Путешествие по Европе</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link href="fonts/Montserrat-Regular.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link href="fonts/Montserrat-SemiBold.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link href="fonts/Montserrat-Bold.woff2" as="font" rel="preload" crossorigin="anonymous">
 </head>
 
 <body class="page-body">
@@ -14,7 +17,7 @@
     <a class="logo main-header__logo" href="#">
       <picture>
         <source media="(max-width: 1024px)" srcset="img/logo-tablet.svg">
-        <img class="logo__img" src="img/logo.svg" width="57" height="22" alt="Логотип сайта «Туры по Европe»" />
+        <img class="logo__img" src="img/logo.svg" width="57" height="22" alt="Логотип сайта «Путешествие по Европe»" />
       </picture>
     </a>
     <nav class="site-navigation main-header__site-navigation">
@@ -39,22 +42,22 @@
       </svg>
       <span class="link-icon__text">+7 (499) -784-684-46</span>
     </a>
-    <button class="menu-button main-header__menu-button">
-      <svg class="menu-button__svg" width="30" height="30">
+    <button class="menu-button main-header__menu-button" aria-label="Меню">
+      <svg class="menu-button__svg" width="30" height="30" aria-hidden="true" focusable="false">
         <use class="menu-button__menu" xlink:href="img/sprite.svg#menu"></use>
         <use class="menu-button__cross" xlink:href="img/sprite.svg#cross"></use>
       </svg>
     </button>
   </header>
   <main class="main">
-    <h1 class="visually-hidden">Главная страница</h1>
+    <h1 class="visually-hidden">Главная страница сайта «Путешествие по Европe»</h1>
     <section class="site-banner">
       <div class="site-banner__wrapper container">
         <h2 class="site-banner__title">Путешeствие по Европе</h2>
         <p class="site-banner__text">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а
           также потрясающая красота природы.</p>
         <a class="button button--icon site-banner__button" href="#countries">Смотреть тур
-          <svg class="button__svg" width="14" height="14">
+          <svg class="button__svg" width="14" height="14" aria-hidden="true" focusable="false">
             <use xlink:href="img/sprite.svg#arrow-secondary-down"></use>
           </svg>
         </a>
@@ -76,7 +79,7 @@
                 srcset="img/content/country-card-greece-tablet.jpg 1x, img/content/country-card-greece-tablet@2x.jpg 2x">
               <img class="country-card__img" src="img/content/country-card-greece-desktop.jpg"
                 srcset="img/content/country-card-greece-desktop@2x.jpg 2x" width="350" height="430"
-                alt="Вилла на скале на фоне гор" />
+                alt="Монастырь в Греции на вершине скалы «Метеора»" />
             </picture>
             <span class="country-card__title">Греция</span>
             <span class="button button--transparent country-card__button">Смотреть подробнее</span>
@@ -93,7 +96,7 @@
                 srcset="img/content/country-card-albania-tablet.jpg 1x, img/content/country-card-albania-tablet@2x.jpg 2x">
               <img class="country-card__img" src="img/content/country-card-albania-desktop.jpg"
                 srcset="img/content/country-card-albania-desktop@2x.jpg 2x" width="350" height="430"
-                alt="Вид на пляж и лазурный берег сверху" />
+                alt="Пляж курорта «Ксамиль». Вид сверху" />
             </picture>
             <span class="country-card__title">Албания</span>
             <span class="button button--transparent country-card__button">Смотреть подробнее</span>
@@ -110,7 +113,7 @@
                 srcset="img/content/country-card-macedonia-tablet.jpg 1x, img/content/country-card-macedonia-tablet@2x.jpg 2x">
               <img class="country-card__img" src="img/content/country-card-macedonia-desktop.jpg"
                 srcset="img/content/country-card-macedonia-desktop@2x.jpg 2x" width="350" height="430"
-                alt="Церковь на фоне моря" />
+                alt="«Палаошник» на фоне Охридского озера" />
             </picture>
             <span class="country-card__title">Македония</span>
             <span class="button button--transparent country-card__button">Смотреть подробнее</span>
@@ -127,7 +130,7 @@
                 srcset="img/content/country-card-montenegro-tablet.jpg 1x, img/content/country-card-montenegro-tablet@2x.jpg 2x">
               <img class="country-card__img" src="img/content/country-card-montenegro-desktop.jpg"
                 srcset="img/content/country-card-montenegro-desktop@2x.jpg 2x" width="350" height="430"
-                alt="Вид сверху на лазурную реки и лес" />
+                alt="Каньон реки Тара" />
             </picture>
             <span class="country-card__title">Черногория</span>
             <span class="button button--transparent country-card__button">Смотреть подробнее</span>
@@ -144,7 +147,7 @@
                 srcset="img/content/country-card-croatia-tablet.jpg 1x, img/content/country-card-croatia-tablet@2x.jpg 2x">
               <img class="country-card__img" src="img/content/country-card-croatia-desktop.jpg"
                 srcset="img/content/country-card-croatia-desktop@2x.jpg 2x" width="350" height="430"
-                alt="Сталактиты в пещере" />
+                alt="Сталактиты в пещере Бередине" />
             </picture>
             <span class="country-card__title">Хорватия</span>
             <span class="button button--transparent country-card__button">Смотреть подробнее</span>
@@ -191,7 +194,7 @@
                 высоту
                 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.
               </p>
-              <a class="button country__button" href="#">Купить тур сейчас</a>
+              <a class="button country__button" href="#modal">Купить тур сейчас</a>
             </div>
             <div class="feedback country__feedback">
               <h3 class="heading heading--small feedback__heading">Отзывы</h3>
@@ -207,7 +210,7 @@
                       srcset="img/content/users/user-vlada.webp 1x, img/content/users/user-vlada@2x.webp 2x">
                     <img class="feedback__author-img" src="img/content/users/user-vlada.jpg"
                       srcset="img/content/users/user-vlada@2x.jpg 2x" width="38" height="38"
-                      alt="Аватар Влады Голицыной">
+                      alt="Аватар клиента Влада Голицына">
                   </picture>
                   <span class="feedback__author-name">Влада Голицына</span>
                 </div>
@@ -240,7 +243,7 @@
                 песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого
                 состояния.
               </p>
-              <a class="button country__button" href="#">Купить тур сейчас</a>
+              <a class="button country__button" href="#modal">Купить тур сейчас</a>
             </div>
             <div class="feedback country__feedback">
               <h3 class="heading heading--small feedback__heading">Отзывы</h3>
@@ -279,7 +282,7 @@
                 местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев
                 Камен где находится археологический памятник Кокино в длину около 100 метров.
               </p>
-              <a class="button country__button" href="#">Купить тур сейчас</a>
+              <a class="button country__button" href="#modal">Купить тур сейчас</a>
             </div>
             <div class="feedback country__feedback">
               <h3 class="heading heading--small feedback__heading">Отзывы</h3>
@@ -318,7 +321,7 @@
                 Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых местах высотой
                 берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км.
               </p>
-              <a class="button country__button" href="#">Купить тур сейчас</a>
+              <a class="button country__button" href="#modal">Купить тур сейчас</a>
             </div>
             <div class="feedback country__feedback">
               <h3 class="heading heading--small feedback__heading">Отзывы</h3>
@@ -356,7 +359,7 @@
                 метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами —
                 сталактитами и сталагмитами — формировавшимися тысячи и тысячи лет.
               </p>
-              <a class="button country__button" href="#">Купить тур сейчас</a>
+              <a class="button country__button" href="#modal">Купить тур сейчас</a>
             </div>
             <div class="feedback country__feedback">
               <h3 class="heading heading--small feedback__heading">Отзывы</h3>
@@ -396,7 +399,7 @@
             потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!</p>
           <p class="prices__contact">Свяжитесь с нами</p>
           <a class="link-icon link-icon--phone prices__link-icon" href="tel:+749978468446">
-            <svg class="link-icon__svg" width="30" height="30">
+            <svg class="link-icon__svg" width="30" height="30" aria-hidden="true" focusable="false">
               <use xlink:href="img/sprite.svg#phone"></use>
             </svg>
             <span class="link-icon__text">+7 (499) -784-684-46</span>
@@ -411,31 +414,31 @@
             <p class="card-price__text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
             <ul class="card-price__list">
               <li class="card-price__list-item">
-                <svg class="card-price__icon-check" width="22" height="22">
+                <svg class="card-price__icon-check" width="22" height="22" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#icon-check"></use>
                 </svg>
                 <span class="card-price__offer">Разработанный маршрут с гидом группы</span>
               </li>
               <li class="card-price__list-item">
-                <svg class="card-price__icon-check" width="22" height="22">
+                <svg class="card-price__icon-check" width="22" height="22" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#icon-check"></use>
                 </svg>
                 <span class="card-price__offer">Перелет, трансфер и проживание в отелях</span>
               </li>
               <li class="card-price__list-item">
-                <svg class="card-price__icon-check" width="22" height="22">
+                <svg class="card-price__icon-check" width="22" height="22" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#icon-check"></use>
                 </svg>
                 <span class="card-price__offer">Завтраки, ужины в отелях и ланчи на природе</span>
               </li>
               <li class="card-price__list-item">
-                <svg class="card-price__icon-check" width="22" height="22">
+                <svg class="card-price__icon-check" width="22" height="22" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#icon-check"></use>
                 </svg>
                 <span class="card-price__offer">Экскурсии по удивительно красивым местам Европы</span>
               </li>
             </ul>
-            <a class="button card-price__button" href="#">Купить тур сейчас</a>
+            <a class="button card-price__button" href="#modal">Купить тур сейчас</a>
           </div>
           <div class="card-price">
             <header class="card-price__header">
@@ -445,37 +448,37 @@
             <p class="card-price__text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
             <ul class="card-price__list">
               <li class="card-price__list-item">
-                <svg class="card-price__icon-check" width="22" height="22">
+                <svg class="card-price__icon-check" width="22" height="22" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#icon-check"></use>
                 </svg>
                 <span class="card-price__offer">Разработанный маршрут с гидом группы</span>
               </li>
               <li class="card-price__list-item">
-                <svg class="card-price__icon-check" width="22" height="22">
+                <svg class="card-price__icon-check" width="22" height="22" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#icon-check"></use>
                 </svg>
                 <span class="card-price__offer">Перелет и трансфер</span>
               </li>
               <li class="card-price__list-item">
-                <svg class="card-price__icon-check" width="22" height="22">
+                <svg class="card-price__icon-check" width="22" height="22" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#icon-check"></use>
                 </svg>
                 <span class="card-price__offer">Проживание в хостелах при отелях</span>
               </li>
               <li class="card-price__list-item">
-                <svg class="card-price__icon-check" width="22" height="22">
+                <svg class="card-price__icon-check" width="22" height="22" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#icon-check"></use>
                 </svg>
                 <span class="card-price__offer">Только завтраки в отелях</span>
               </li>
               <li class="card-price__list-item">
-                <svg class="card-price__icon-check" width="22" height="22">
+                <svg class="card-price__icon-check" width="22" height="22" aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#icon-check"></use>
                 </svg>
                 <span class="card-price__offer">Экскурсии по удивительно красивым местам Европы</span>
               </li>
             </ul>
-            <a class="button card-price__button" href="#">Купить тур сейчас</a>
+            <a class="button card-price__button" href="#modal">Купить тур сейчас</a>
           </div>
         </div>
       </div>
@@ -536,13 +539,13 @@
         <h3 class="main-footer__title">Наши контакты</h3>
         <a class="link-icon link-icon--secondary link-icon--mail main-footer__link-icon"
           href="mailto:puteshestviemechta@gmail.ru">
-          <svg class="link-icon__svg" width="26" height="20">
+          <svg class="link-icon__svg" width="26" height="20" aria-hidden="true" focusable="false">
             <use xlink:href="img/sprite.svg#mail"></use>
           </svg>
           <span class="link-icon__text">puteshestviemechta@gmail.ru</span>
         </a>
         <a class="link-icon link-icon--secondary link-icon--phone" href="tel:+749978468446">
-          <svg class="link-icon__svg" width="30" height="30">
+          <svg class="link-icon__svg" width="30" height="30" aria-hidden="true" focusable="false">
             <use xlink:href="img/sprite.svg#phone"></use>
           </svg>
           <span class="link-icon__text">+7 (499) -784-684-46</span>
@@ -556,7 +559,7 @@
       </div>
     </section>
   </footer>
-  <section class="modal">
+  <section class="modal" id="modal">
     <div class="modal__window modal__window--buy-tour">
       <div class="popup-form modal__popup-form">
         <h2 class="popup-form__title">Купить тур</h2>
@@ -581,7 +584,7 @@
         <p class="modal__success-text">Форма успешно отправлена, спасибо! :)</p>
       </div>
       <button class="modal__close" aria-label="Закрыть окно">
-        <svg class="modal__close-svg" width="22" height="22">
+        <svg class="modal__close-svg" width="22" height="22" aria-hidden="true" focusable="false">
           <use class="modal__close-cross" xlink:href="img/sprite.svg#cross"></use>
         </svg>
       </button>
